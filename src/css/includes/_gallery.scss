@@ -1,0 +1,49 @@
+// Start gallery
+.gallery {
+  .container {
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      .gallery-box {
+        position: relative;
+        height: 250px;
+        cursor: pointer;
+        &:hover {
+          .image img {
+            transform: scale(1.1);
+          }
+        }
+        .image {
+          overflow: hidden;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          height: 200px;
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            transition: $transition;
+          }
+        }
+        .text {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 50px;
+          background-color: $lightBackground;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+          margin-top: -5px;
+          p {
+            margin: 0;
+            color: $textColor;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+// End gallery

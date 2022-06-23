@@ -1,0 +1,79 @@
+mixin head(name)
+  meta(charset="UTF-8")
+  meta(http-equiv="X-UA-Compatible", content="IE=edge")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  meta(name="description", content="The official website of the photographer Amr Ahmed")
+  title= name
+  link(rel="shortcut icon", href="../images/logo.png", type="image/x-icon")
+  link(rel="stylesheet", href="../css/main.css")
+
+mixin nav()
+  nav
+    .container
+      .logo
+        a(href="../index") #[img(src="../images/logo.png")]
+      i(class="fas fa-bars menu")
+      ul.menu-desk
+        li #[a(href="../index" class="link") Home Page]
+        li #[a(href="../about" class="link") About Me]
+        li #[a(href="../gallery" class="link") Gallery]
+        li #[a(href="../contact" class="link") Contact Me]
+      .phone
+        i(class="fas fa-times close")
+        ul.menu-phone
+          li #[a(href="../index" class="link") Home Page]
+          li #[a(href="../about" class="link") About Me]
+          li #[a(href="../gallery" class="link") Gallery]
+          li #[a(href="../contact" class="link") Contact Me]
+
+mixin heading(title)
+  .header
+    .container
+      h1= title
+      p Here is a collection of the best and most beautiful pictures of #{title} that were taken by my lens
+
+mixin footer
+  .footerTop
+    .container
+      .text(data-aos="fade-right")
+        h2 Need help with professional photography?#[br]Let's work together!
+        a(href="../contact") Contact Me
+  footer(data-aos="fade-right")
+    .container
+      .container
+        .info
+          img(src="../images/logo.png")
+          p I'm not special ,but my goal is being special at everything,#[br]Which makes me glow anywhere.
+          .social
+            a(href="https://www.facebook.com/profile.php?id=100013368224176" target="_blank" title="Facebook") #[i(class="fab fa-facebook" aria-hidden="true")]
+            a(href="https://twitter.com/AmrAhme65310193?t=JAATQGgS040d062O4ypq8w&s=09" target="_blank" title="Twitter") #[i(class="fab fa-twitter" aria-hidden="true")]
+            a(href="https://www.instagram.com/amrahmad_official/" target="_blank" title="Instagram") #[i(class="fab fa-instagram" aria-hidden="true")]
+        .links
+          ul.menu
+            h4 Links
+            li #[a(href="../index") Home Page]
+            li #[a(href="../about") About Me]
+            li #[a(href="../gallery") Gallery]
+            li #[a(href="../contact") Contact Me]
+          ul.producers
+            h4 producers
+            li Devoloper :
+            li #[a(href="https://www.facebook.com/kareem1911" target="_blank") Kareem Mohamed]
+            li Idea owner :
+            li #[a(href="https://www.facebook.com/profile.php?id=100001992564488" targit="_blank") Abdelrahman Maher]
+      hr
+      .copy-right
+        p Copyright #[i(class="far fa-copyright")] #[span] All rights reserved.
+
+mixin loading
+  .loading
+    div.spinner
+      div.double-bounce1
+      div.double-bounce2
+
+mixin scripts
+  script(src="../js/aos.js")
+  script AOS.init();
+  script(src="../js/main.js")
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js")

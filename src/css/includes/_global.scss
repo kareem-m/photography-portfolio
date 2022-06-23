@@ -1,0 +1,421 @@
+// Start Global Values
+body {
+  overflow: hidden;
+  color: #fff;
+  background-color: $background;
+  font-family: 'Jost', sans-serif;
+  a {
+    color: #fff;
+  }
+  section.home {
+    padding: 50px 0;
+    margin-top: -8px;
+  }
+  section, .main {
+    padding: 0 0 50px;
+    .header {
+      background: url("../images/pagesBanner.jpg") center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      padding: 100px 0;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(17 17 17 / 54%);
+      }
+      .container {
+        display: block !important;
+        h1, p {
+          position: relative;
+          margin: 20px 0;
+        }
+        h1 {
+          font-size: 40px;
+          margin-bottom: 40px;
+        }
+        p {
+          font-size: 20px;
+          color: $textColor;
+          &::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 400px;
+            max-width: 100%;
+            height: 1px;
+            background-color: $textColor;
+          }
+        }
+      }
+    }
+  }
+  .about, .gallery, .contact {
+    .container {
+      padding-top: 50px;
+    }
+  }
+}
+// End Global Values
+// Start Nav
+nav {
+  transition: $transition;
+  background-color: transparent;
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  padding: 15px 0;
+  height: 100px;
+  &.sticky {
+    padding: 0;
+    box-shadow: 2px 2px 20px 0px #00000027;
+    background-color: $lightBackground;
+    height: 70px;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    .logo {
+      a {
+        display: block;
+        img {
+          width: 50px;
+        }
+      }
+    }
+    i.menu {
+      display: none;
+      font-size: 20px;
+      cursor: pointer;
+      margin-right: 10px;
+      color: #fff;
+      @media (max-width: 582px) {
+        display: block;
+      }
+    }
+    ul.menu-desk {
+      display: flex;
+      @media (max-width: 582px) {
+        display: none;
+      }
+      li {
+        transition: $transition;
+        a {
+          transition: $transition;
+          padding: 20px;
+          position: relative;
+          color: $textColor;
+          &::before {
+            content: "";
+            height: 2px;
+            width: 0;
+            background-color: $mainColor;
+            position: absolute;
+            bottom: 7px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: $transition;
+          }
+          &:hover,
+          &.active {
+            color: $mainColor;
+            &::before {
+              width: 60px;
+            }
+          }
+        }
+      }
+    }
+    .phone {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $background;
+      &.show {
+        top: 0;
+        i.close {
+          display: block;
+        }
+      }
+      i.close {
+        display: none;
+        position: fixed;
+        top: 40px;
+        right: 40px;
+        font-size: 25px;
+        cursor: pointer;
+      }
+      ul.menu-phone {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        li {
+          margin: 50px 0 50px;
+          transition: $transition;
+          a {
+            padding: 20px;
+            position: relative;
+            color: $textColor;
+            &::before {
+              content: "";
+              height: 2px;
+              width: 0;
+              background-color: #fff;
+              position: absolute;
+              bottom: 7px;
+              left: 50%;
+              transform: translateX(-50%);
+              transition: $transition;
+            }
+            &:hover,
+            &.active {
+              color: #fff;
+              &::before {
+                width: 60px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// End Nav
+// Start Footer
+.footerTop {
+  background-color: $background;
+  background: url("../images/footerBanner.jpg") top;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 40px 0;
+  height: 300px;
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #1111118a;
+  }
+  .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .text {
+      h2 {
+        margin: 0;
+        line-height: 1.5;
+        margin-bottom: 80px;
+        font-weight: normal;
+      }
+      a {
+        background-color: transparent;
+        border: 2px solid $whiteBackground;
+        color: #fff;
+        padding: 15px 20px;
+        border-radius: 20px;
+        transition: $transition;
+        &:hover {
+          background-color: $whiteBackground;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  overflow: hidden;
+  background-color: $background;
+  padding: 40px 0 0;
+  .container {
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      gap: 30px;
+      .info {
+        @media (max-width: 470px) {
+          max-width: 90%;
+        }
+        img {
+          width: 50px;
+        }
+        p {
+          color: $textColor;
+        }
+        .social {
+          a {
+            color: $textColor;
+            font-size: 20px;
+            transition: $transition;
+            &:nth-of-type(2) {
+              padding: 0 20px 0;
+            }
+            &:hover {
+              color: $mainColor;
+            }
+          }
+        }
+      }
+      .links {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 40px;
+        @media (max-width: 470px) {
+          max-width: 90%;
+          flex-direction: column;
+        }
+        h4 {
+          font-size: 18px;
+          margin: 15px 0 15px;
+        }
+        .menu {
+          li {
+            padding: 5px 0 5px;
+            transition: $transition;
+            a {
+              color: $textColor;
+              transition: $transition;
+              &::before {
+                content: "\f0da";
+                font-family: "Font Awesome 5 Free";
+                font-weight: bold;
+                margin-right: 7px;
+              }
+            }
+            &:hover a {
+              color: $mainColor;
+            }
+          }
+        }
+        .producers {
+          li {
+            padding: 5px 0 5px;
+            a {
+              font-weight: normal;
+              color: $textColor;
+              transition: $transition;
+              &::before {
+                content: "\f0da";
+                font-family: "Font Awesome 5 Free";
+                font-weight: bold;
+                margin-right: 7px;
+              }
+              &:hover {
+                color: $mainColor;
+              }
+            }
+          }
+        }
+      }
+    }
+    hr {
+      border-color: #fff;
+    }
+    .copy-right {
+      p {
+        font-size: 18px;
+        color: #fff;
+        margin: 0;
+        text-align: center;
+        padding: 15px 0;
+      }
+    }
+  }
+}
+// End Footer
+// Start Toggles
+.scrollToggle {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  color: $mainColor;
+  border: 2px solid $mainColor;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: $transition;
+  &::before {
+    font-family: "font awesome 5 free";
+    font-weight: bold;
+    font-size: 20px;
+  }
+  &:hover {
+    background-color: $mainColor;
+    color: $whiteBackground;
+  }
+}
+.scrollToggle {
+  bottom: 20px;
+  right: -50px;
+  &.show {
+    right: 20px;
+  }
+  &::before {
+    content: "\f106";
+  }
+}
+// End Toggles
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $background;
+  .spinner {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    margin: 100px auto;
+    .double-bounce1,
+    .double-bounce2 {
+      background-color: $mainColor;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      opacity: 0.6;
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: sk-bounce 2s infinite ease-in-out;
+      @keyframes sk-bounce {
+        0%,
+        100% {
+          transform: scale(0);
+        }
+        50% {
+          transform: scale(1);
+        }
+      }
+    }
+    .double-bounce2 {
+      animation-delay: -1s;
+    }
+  }
+}

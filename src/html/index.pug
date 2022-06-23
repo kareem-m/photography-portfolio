@@ -1,0 +1,39 @@
+include includes/includes.pug
+doctype html
+html(lang="en")
+  head
+    +head("Amr Ahmed")
+  body
+    +nav
+    //- Start home
+    section(class="home")
+      .img
+        i(class="fas fa-arrow-alt-circle-down")
+        .container
+          h2 Hello there! I'm
+          h1 Amr Ahmed
+          h3 & You're Here to see #[span(class="typed-text")] #[span(class="cursor")] #[br]pics are taken by my lens.
+          a(href="app/amr.apk") Download App
+          a(href="gallery") Gallery
+    //- End home
+    //- Start About
+    section(class="aboutHome")
+      .container
+        .text(data-aos="fade-right")
+          h1 Hi, I'm a professional Photographer based on Alex
+          p First question you will ask when you know that is there is a web site all about me
+          p "Why shall I read about him? What is special about him?".
+          p I'm not special ,but my goal is being special at everything,
+          p Which makes me glow anywhere.
+          p No one knows everything about me , literally.
+          p One of my side goals is being #[span mysteries],
+          p At the first I thought that I can't, but I found out that I have
+          p dark past and memories i won't let them see the light!
+          p I am always good at giving advice ,but I am not good at all at working with them.
+          p The photos will describe more  about my #[span Hidden Self].
+        .img(data-aos="fade-right")
+          img(src="images/profile2.jpg")
+    //- End About
+    +footer
+    +loading
+    +athers("home")

@@ -1,0 +1,226 @@
+// Start Home
+.home {
+  padding: 0;
+  height: 100vh;
+  margin-top: -100px;
+  position: relative;
+  background-color: $background;
+  overflow: hidden;
+  &::before {
+    content: "";
+    width: 200%;
+    height: 400px;
+    background-color: $whiteBackground;
+    transform: rotate(350deg);
+    position: absolute;
+    bottom: -120px;
+    left: -50%;
+  }
+  .img {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: calc(100% - 100px);
+    height: calc(100% - 120px);
+    background-color: $background;
+    background: url("../../images/landing.jpg") center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media (max-width: 540px) {
+      left: 20px;
+      width: calc(100% - 40px);
+    }
+    i {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      color: #fff;
+      font-size: 25px;
+      cursor: pointer;
+      transition: $transition;
+      animation: bouncing 2s infinite;
+      @keyframes bouncing {
+        0%, 10%, 20%, 50%, 80%, 100% {
+          transform: translatey(0);
+        }
+        40%, 60% {
+          transform: translatey(-10px);
+        }
+      }
+    }
+    .container {
+      position: relative;
+      padding-top: 130px;
+      h2 {
+        margin: 0;
+        font-weight: normal;
+        color: $textColor;
+        font-size: 18px;
+        @media (max-width: 540px) {
+          font-size: 20px;
+        }
+      }
+      h1 {
+        color: #fff;
+        font-size: 60px;
+        letter-spacing: 2px;
+        margin: 10px 0 20px;
+        @media (max-width: 540px) {
+          font-size: 40px;
+        }
+      }
+      h3 {
+        color: $textColor;
+        font-weight: normal;
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.5;
+        @media (max-width: 540px) {
+          font-size: 16px;
+        }
+        .cursor {
+          display: inline-block;
+          background-color: $textColor;
+          margin-left: 1px;
+          width: 2px;
+          height: 15px;
+          animation: blink 1s infinite;
+          &.typing {
+            animation: none;
+          }
+          @keyframes blink {
+            0% {
+              background-color: $textColor;
+            }
+            49% {
+              background-color: $textColor;
+            }
+            50% {
+              background-color: transparent;
+            }
+            99% {
+              background-color: transparent;
+            }
+            100% {
+              background-color: #ccc;
+            }
+          }
+        }
+      }
+      a {
+        display: inline-block;
+        font-size: 18px;
+        margin-top: 50px;
+        padding: 10px 20px;
+        background-color: #fff;
+        color: #000;
+        border-radius: 20px;
+        margin-right: 10px;
+        border: 2px solid #fff;
+        transition: $transition;
+        &:hover {
+          background-color: transparent;
+          color: #fff;
+        }
+      }
+      a + a {
+        background-color: transparent;
+        color: #fff;
+        &:hover {
+          background-color: #fff;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+// End Home
+// Start About
+.aboutHome {
+  background-color: $whiteBackground;
+  color: #000;
+  padding: 120px 0;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 10px;
+    .text {
+      @media (max-width: 450px) {
+        width: 350px;
+      }
+      h1 {
+        margin: 0 0 40px;
+        line-height: 1.5;
+        font-weight: normal;
+        @media (max-width: 450px) {
+          font-size: 25px;
+        }
+      }
+      p {
+        line-height: 1.2;
+        color: $textColor;
+        font-size: 16px;
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+    .img {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      max-width: 100%;
+      @media (max-width: 992px) {
+        margin-top: 50px;
+      }
+      &:hover img {
+        transform: translateY(-10px);
+        box-shadow: -30px 40px 0 $lightBackground;
+      }
+      &::before {
+        content: '';
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: -25px;
+        left: -20px;
+        background-image: url(../images/dots.png);
+        background-repeat: repeat;
+        @media (max-width: 470px) {
+          width: 150px;
+          height: 150px;
+          top: -20px;
+          left: 10px;
+        }
+        @media (max-width: 430px) {
+          width: 100px;
+          height: 100px;
+          top: -20px;
+          left: 40px;
+        }
+      }
+      img {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        z-index: 2;
+        box-shadow: 30px 30px 0 $lightBackground;
+        transition: $transition;
+        border-radius: 10px;
+        @media (max-width: 600px) {
+          width: 400px;
+          height: 400px;
+        }
+        @media (max-width: 470px) {
+          width: 300px;
+          height: 300px;
+        }
+        @media (max-width: 430px) {
+          width: 200px;
+          height: 200px;
+        }
+      }
+    }
+  }
+}
+// End About

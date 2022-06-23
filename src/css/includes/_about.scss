@@ -1,0 +1,178 @@
+// Start About
+.about {
+  padding-bottom: 0;
+  .container {
+    .cont {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      justify-content: center;
+      .left,
+      .right {
+        padding: 20px;
+        @media (max-width: 500px) {
+          padding: 0;
+        }
+      }
+      .left {
+        position: relative;
+        &:hover img {
+          transform: translateY(-10px);
+          box-shadow: 30px 40px 0 $lightBackground;
+        }
+        &::before {
+          content: '';
+          width: 200px;
+          height: 200px;
+          position: absolute;
+          top: -25px;
+          right: -20px;
+          background-image: url(../images/dots.png);
+          background-repeat: repeat;
+          z-index: -1;
+          @media (max-width: 470px) {
+            width: 150px;
+            height: 150px;
+            top: -20px;
+            left: 10px;
+          }
+          @media (max-width: 430px) {
+            width: 100px;
+            height: 100px;
+            top: -20px;
+            left: 40px;
+          }
+        }
+        @media (max-width: 500px) {
+          width: 85%;
+          margin: 0 auto;
+        }
+        img {
+          border-radius: 10px;
+          box-shadow: -30px 30px 0 $lightBackground;
+          transition: $transition;
+          @media (max-width: 500px) {
+            margin-bottom: 50px;
+          }
+        }
+      }
+      .right {
+        @media (max-width: 700px) {
+          text-align: center;
+        }
+        @media (max-width: 500px) {
+          width: 85%;
+          margin: 0 auto;
+        }
+        h1 {
+          font-size: 40px;
+          margin: 0 0 30px;
+        }
+        p {
+          font-size: 18px;
+          line-height: 1.4;
+          color: $textColor;
+          i, span {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    .quote {
+      background-color: $lightBackground;
+      border-radius: 10px;
+      text-align: center;
+      padding: 5px;
+      margin-top: 30px;
+      max-width: 100%;
+      p:first-of-type {
+        font-size: 30px;
+        margin: 20px 0 10px;
+        position: relative;
+        color: var(--text-dark);
+        font-weight: normal;
+        @media (max-width: 700px) {
+          font-size: 20px;
+        }
+        @media (max-width: 480px) {
+          font-size: 15px;
+        }
+        &::before,
+        &::after {
+          position: absolute;
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          font-size: 15px;
+          color: #fff;
+          @media (max-width: 480px) {
+            font-size: 12px;
+          }
+        }
+        &::before {
+          content: "\f10d";
+          transform: translateX(-30px);
+        }
+        &::after {
+          content: "\f10e";
+          transform: translate(15px, 30px);
+        }
+      }
+      p:last-of-type {
+        font-size: 20px;
+        margin: 0 0 20px;
+        color: $textColor;
+        @media (max-width: 700px) {
+          font-size: 15px;
+        }
+        @media (max-width: 480px) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .stats {
+    margin-top: 50px;
+    background-color: $whiteBackground;
+    color: #000;
+    padding-bottom: 50px;
+    .container {
+      padding: 20px 0;
+      h1 {
+        text-align: center;
+        font-size: 35px;
+        font-weight: normal;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 80px;
+        padding: 5px;
+        @media (max-width: 700px) {
+          gap: 20px;
+        }
+      }
+      .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #eee;
+        border-radius: 10px;
+        border: 2px solid #eee;
+        transition: 0.3s;
+        box-shadow: 4px 4px 10px #00000026;
+        &:hover {
+          border: 2px solid $mainColor;
+        }
+        @media (max-width: 630px) {
+          width: 300px;
+          margin: 0 auto;
+        }
+        h1 {
+          margin: 15px 0 15px;
+        }
+      }
+    }
+    
+  }
+}
+// End About

@@ -1,0 +1,68 @@
+include includes/includes.pug
+doctype html
+html(lang="en")
+  head
+    +head("About Me | Amr Ahmed")
+  body
+    +nav
+    //- Start About
+    section(class="about" id="about")
+      +heading("About Me", "Who i am")
+      .container
+        .cont
+          .left(data-aos="fade-right")
+            img.image(src="images/profile.jpg")
+          .right(data-aos="fade-right")
+            h1 Amr Ahmed Hassan
+            p
+              //- p First question you will ask when you know that is there is a web site all about me
+              //- p "Why shall I read about him? What is special about him?".
+              //- p I'm not special ,but my goal is being special at everything,
+              //- p Which makes me glow anywhere.
+              //- p No one knows everything about me , literally.
+              //- p One of my side goals is being #[span mysteries],
+              //- p At the first I thought that I can't, but I found out that I have
+              //- p dark past and memories i won't let them see the light!
+              //- p I am always good at giving advice ,but I am not good at all at working with them.
+              //- p The photos will describe more  about my #[span Hidden Self].
+
+
+              p #[i " God doesn't do anything bad for his servants "]
+              p Hi, this is my Quote which helps me to survive and live in this world while being satisfied
+              p you gotta know that every picture i have captured it i imagined it first
+              p this how life works imagine , prepare, and do it.
+              p Founding a real love was hard and harsh to me but now i got a real love
+              p it is memories and putting it into a picture to bring it back in my imagination
+              p it always makes life better and more beautiful .
+              p My last words are advising you to pray and enjoy in this world
+              p and don't forget that #[span pray] comes before #[span enjoy]
+
+
+
+
+
+
+        .quote(data-aos="fade-right")
+          p You don't take a photograph, you make it
+          p - Ansel Adams
+      .stats
+        .container
+          h1(data-aos="fade-right") Our Awesome Stats
+          .container
+            .box(data-aos="zoom-in-up")
+              p More Than
+              h1(data-goal="1000") 800
+              p Photos Taken
+            .box(data-aos="zoom-in-up")
+              p More Than
+              h1(data-goal="25") 0
+              p Places Captured
+            .box(data-aos="zoom-in-up")
+              p More Than
+              h1(data-goal="100") 0
+              p Happy People
+    //- End About
+    +footer
+    +loading
+    script(src="js_files/about.js")
+    +athers("about")

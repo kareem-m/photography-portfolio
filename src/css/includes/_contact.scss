@@ -1,0 +1,144 @@
+// Start Contact me
+.contact {
+  .header {
+    p {
+      &::before {
+        width: 200px !important;
+      }
+      &::after {
+        width: 140px !important;
+      }
+    }
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 40px;
+    overflow-x: hidden;
+    h1 {
+      font-weight: normal;
+      font-size: 40px;
+      margin: 30px 0 15px;
+      @media (max-width: 450px) {
+        font-size: 35px;
+      }
+    }
+    p {
+      font-size: 16px;
+      color: $textColor;
+      margin: 0 0 40px;
+      max-width: 85%;
+      line-height: 1.5;
+    }
+    .left {
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 30px;
+        label {
+          font-size: 18px;
+        }
+        input#inputName,
+        textarea {
+          background-color: #00000000;
+          outline: none;
+          border: none;
+          border: 1px solid #fff;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          color: #fff;
+          caret-color: $mainColor;
+          padding: 15px;
+          @media (max-width: 430px) {
+            max-width: 80%;
+          }
+          &:focus {
+            border: {
+              left-color: $mainColor;
+              right-color: $mainColor;
+              top-color: $mainColor;
+            }
+          }
+        }
+        textarea {
+          height: 150px;
+          line-height: 1.5;
+        }
+        .progress {
+          display: block;
+          position: relative;
+          width: 0;
+          height: 1px;
+          left: 0;
+          top: -11px;
+          background-color: $mainColor;
+        }
+        input:last-of-type {
+          background-color: $mainColor;
+          border: none;
+          color: #fff;
+          border-radius: 5px;
+          padding: 10px 15px;
+          @media (max-width: 430px) {
+            max-width: 80%;
+          }
+        }
+      }
+    }
+    .right {
+      .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        @media (max-width: 510px) {
+          grid-template-columns: 1fr;
+        }
+        .box-container .box {
+          display: flex;
+          i {
+            color: $mainColor;
+            margin-right: 30px;
+            font-size: 20px;
+          }
+          span {
+            display: block;
+            h4 {
+              font-weight: normal;
+              font-size: 22px;
+              margin: -5px 0 0;
+            }
+            p {
+              font-size: 16px;
+              max-width: 100%;
+              margin: 10px 0 30px;
+              color: $textColor;
+              a {
+                display: block;
+                color: $textColor;
+              }
+            }
+          }
+        }
+        .qrbox {
+          img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+          }
+          .social {
+            margin-top: 20px;
+            a {
+              font-size: 25px;
+              color: $mainColor;
+              &:nth-of-type(2) {
+                padding: 0 20px 0 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// End Contact me

@@ -1,0 +1,66 @@
+include includes/includes.pug
+doctype html
+html(lang="en")
+  head
+    +head("Gallery | Amr Ahmed")
+  body
+    +nav
+    //- Start Gallery
+    section.gallery#gallery
+      +heading("My Gallery", "Best works")
+      .container
+        .container
+          a(href="gallery_pages/animals" data-aos="zoom-in-up").gallery-box
+            .image
+              img(src="gallery/animals/5.jpg")
+            .text.center-flex
+              p Animals & Sea Creatures
+          a(href="gallery_pages/art" data-aos="zoom-in-up").gallery-box
+            .image
+              img(src="gallery/art/5.jpg")
+            .text.center-flex
+              p Art
+          a(href="gallery_pages/buildings" data-aos="zoom-in-up").gallery-box
+            .image
+              img(src="gallery/buildings/3.jpg")
+            .text.center-flex
+              p Buildings
+          a(href="gallery_pages/cars-and-boats" data-aos="zoom-in-up").gallery-box
+            .image
+              img(src="gallery/cars-and-boats/4.jpg")
+            .text.center-flex
+              p Cars & Boats
+          a(href="gallery_pages/food-and-drinks" data-aos="zoom-in-up").gallery-box
+            .image
+              img(src="gallery/food-and-drinks/2.jpg")
+            .text.center-flex
+              p Food & Drinks
+          a(href="gallery_pages/green-view" data-aos="zoom-in-up").gallery-box
+            .image
+              img(src="gallery/green-view/11.jpg")
+            .text.center-flex
+              p Green View
+          a(href="gallery_pages/plants" data-aos="zoom-in-up").gallery-box
+            .image
+              img(src="gallery/plants/6.jpg")
+            .text.center-flex
+              p Plants
+          a(href="gallery_pages/sea" data-aos="zoom-in-up").gallery-box
+            .image
+              img(src="gallery/sea/21.jpg")
+            .text.center-flex
+              p Sea
+          a(href="gallery_pages/sky-looks" data-aos="zoom-in-up").gallery-box
+            .image
+              img(src="gallery/sky-looks/2.jpg")
+            .text.center-flex
+              p Sky Looks
+          a(href="gallery_pages/streets-and-subways" data-aos="zoom-in-up").gallery-box
+            .image
+              img(src="gallery/streets-and-subways/1.jpg")
+            .text.center-flex
+              p Streets & Subways
+    //- End Gallery
+    +footer
+    +loading
+    +athers("gallery")

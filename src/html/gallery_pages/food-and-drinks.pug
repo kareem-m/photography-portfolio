@@ -1,0 +1,30 @@
+include ../includes/galleryIncludes.pug
+doctype html
+html(lang="en")
+  head
+    +head("Food & Drinks | Amr Ahmed")
+  body
+    +nav
+    //- start main page
+    .main
+      +heading("Food & Drinks")
+      .container
+        div.container-fluid(data-aos="zoom-in-up")
+          a(href="../gallery-and-od & drinks/1.jpg", class="fancybox", data-fancybox="gallery1")
+            img(src="../gallery/food-and-drinks/1.jpg")
+        div.container-fluid(data-aos="zoom-in-up")
+          a(href="../gallery/food-and-drinks/2.jpg", class="fancybox", data-fancybox="gallery1")
+            img(src="../gallery/food-and-drinks/2.jpg")
+        div.container-fluid(data-aos="zoom-in-up")
+          a(href="../gallery/food-and-drinks/3.jpg", class="fancybox", data-fancybox="gallery1")
+            img(src="../gallery/food-and-drinks/3.jpg")
+        div.container-fluid(data-aos="zoom-in-up")
+          a(href="../gallery/food-and-drinks/4.jpg", class="fancybox", data-fancybox="gallery1")
+            img(src="../gallery/food-and-drinks/4.jpg")
+        div.container-fluid(data-aos="zoom-in-up")
+          a(href="../gallery/food-and-drinks/5.jpg", class="fancybox", data-fancybox="gallery1")
+            img(src="../gallery/food-and-drinks/5.jpg")
+    //- End main page
+    +footer
+    +loading
+    +scripts
