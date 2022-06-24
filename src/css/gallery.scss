@@ -1,3 +1,4 @@
+@import "includes/variables";
 // Start Global Values
 nav {
   z-index: 1 !important;
@@ -27,3 +28,15 @@ nav {
   }
 }
 // End Main Content
+// Start menu
+.fancybox-thumbs {
+  padding: 7px !important;
+  background-color: $lightBackground !important;
+}
+.fancybox-progress {
+  background-color: $mainColor;
+}
+.fancybox-thumbs__list a::before {
+  border-color: $mainColor !important;
+}
+// End menu

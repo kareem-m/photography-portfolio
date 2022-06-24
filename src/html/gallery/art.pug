@@ -1,0 +1,33 @@
+include ../includes/galleryIncludes.pug
+doctype html
+html(lang="en")
+  head
+    +head("Art | Amr Ahmed")
+  body
+    +nav
+    //- start main page
+    .main
+      +heading("Art")
+      .container
+        div.container-fluid(data-aos="zoom-in-up")
+          a(href="../imagesGallery/art/1.jpg", class="fancybox", data-fancybox="gallery1")
+            img(src="../imagesGallery/art/1.jpg")
+        div.container-fluid(data-aos="zoom-in-up")
+          a(href="../imagesGallery/art/2.jpg", class="fancybox", data-fancybox="gallery1")
+            img(src="../imagesGallery/art/2.jpg")
+        div.container-fluid(data-aos="zoom-in-up")
+          a(href="../imagesGallery/art/3.jpg", class="fancybox", data-fancybox="gallery1")
+            img(src="../imagesGallery/art/3.jpg")
+        div.container-fluid(data-aos="zoom-in-up")
+          a(href="../imagesGallery/art/4.jpg", class="fancybox", data-fancybox="gallery1")
+            img(src="../imagesGallery/art/4.jpg")
+        div.container-fluid(data-aos="zoom-in-up")
+          a(href="../imagesGallery/art/5.jpg", class="fancybox", data-fancybox="gallery1")
+            img(src="../imagesGallery/art/5.jpg")
+        div.container-fluid(data-aos="zoom-in-up")
+          a(href="../imagesGallery/art/6.jpg", class="fancybox", data-fancybox="gallery1")
+            img(src="../imagesGallery/art/6.jpg")
+    //- End main page
+    +footer
+    +loading
+    +scripts
